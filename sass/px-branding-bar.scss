@@ -42,7 +42,7 @@
   @extend .flex--middle;
   justify-content: space-between;
   min-height: calculateRem(30px);
-  background-color: #012939;
+  background-color: $gray17;
 }
 
 .px-branding-bar__powered-by-text,
