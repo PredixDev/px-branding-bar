@@ -9,7 +9,7 @@
       Fast bootstrapping of the webcomponents-lite library. Only loads the library
       if the browser doesn't natively support web components.
     -->
-    <script type="text/javascript">
+    <script defer type="text/javascript">
     (function() {
       'use strict';
 
@@ -42,12 +42,12 @@
     <!--
       Load the Polymer library.
     -->
-    <link rel="import" href="../polymer/polymer.html" />
+    <link defer rel="import" href="../polymer/polymer.html" />
 
     <!--
       Load the light theme (default theme).
     -->
-    <link rel="import" href="../px-theme/px-theme-styles.html">
+    <link defer rel="import" href="../px-theme/px-theme-styles.html">
     <style include="px-theme-styles" is="custom-style"></style>
 
     <!--

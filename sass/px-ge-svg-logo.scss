@@ -1,0 +1,37 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the for the px-ge-svg-logo component
+//
+// @author
+//
+
+
+
+// Settings
+@import "px-colors-design/_settings.colors.scss";
+
+// Tools
+
+// Generic
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+
+// Base
+
+// Meta
+
+// Objects
+
+// Component
+svg {
+  fill: var(--px-ge-svg-logo-color, $gray8);
+  vertical-align: middle;
+}
