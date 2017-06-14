@@ -1,0 +1,37 @@
+{
+  "name": "px-branding-bar",
+  "version": "0.0.1",
+  "main": [
+    "px-branding-bar.html"
+  ],
+  "ignore": [
+    ".*",
+    "npm-debug.log",
+    "gulpfile.js",
+    "sass",
+    "bower_components",
+    "node_modules",
+    "test",
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github",
+    "px-branding-bar.png",
+    "LICENSE.md",
+    "CONTRIBUTING.md",
+    "HISTORY.md",
+    "README.md",
+    ".jshintrc",
+    ".editorconfig",
+    "*.enc"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.1",
+    "px-theme": "^3.0.0"
+  },
+  "devDependencies": {
+    "px-headings-design": "^1.0.0",
+    "px-layout-design": "^1.0.0",
+    "px-starter-kit-design": "^1.0.0",
+    "px-demo": "^2.0.0"
+  }
+}

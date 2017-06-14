@@ -1,0 +1,38 @@
+<!--
+    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
+    siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
+    'gulp serve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
+-->
+<link defer rel="import" href="../polymer/polymer.html"/>
+
+<link async rel="import" href="px-ge-svg-logo.html">
+<link async rel="import" href="predix-logo.html">
+<link rel="import" href="css/px-branding-bar-styles.html">
+
+<!--
+REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+
+##### Usage
+
+    <px-branding-bar counter-value="1"></px-branding-bar>
+
+@element px-branding-bar
+@blurb REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+@homepage index.html
+@demo index.html
+-->
+
+<dom-module id="px-branding-bar">
+  <template>
+    <style include="px-branding-bar-styles"></style>
+      <div>
+        <px-ge-svg-logo class="u-ml u-mr--"></px-ge-svg-logo>
+        <span class="px-branding-bar__title zeta">Application Name</span>
+      </div>
+      <div>
+        <span class="px-branding-bar__powered-by-text zeta">Powered by</span>
+        <predix-logo class="u-mr"></predix-logo>
+      </div>
+  </template>
+</dom-module>
+<script src="dist/px-branding-bar.js"></script>
