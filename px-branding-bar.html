@@ -26,8 +26,12 @@ REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
   <template>
     <style include="px-branding-bar-styles"></style>
       <div>
-        <px-ge-svg-logo class="u-ml u-mr--"></px-ge-svg-logo>
-        <span class="px-branding-bar__title zeta">Application Name</span>
+        <slot name="logo">
+          <px-ge-svg-logo class="u-ml u-mr--"></px-ge-svg-logo>
+        </slot>
+        <slot name="title">
+          <span class="px-branding-bar__title zeta">Application Name</span>
+        </slot>
       </div>
       <div>
         <span class="px-branding-bar__powered-by-text zeta">Powered by</span>
