@@ -17,6 +17,7 @@
 <!-- Demo DOM module -->
 <dom-module id="local-element-demo">
   <template>
+
     <style include="px-demo-styles" is="custom-style"></style>
 
     <!-- Header -->
@@ -36,7 +37,7 @@
       <!-- Component ---------------------------------------------------------->
       <px-demo-component style="width:100%;">
         <px-branding-bar>
-          <span slot="title">Moo</span>
+          <span slot="title">I like Predix</span>
         </px-branding-bar>
       </px-demo-component>
       <!-- END Component ------------------------------------------------------>
@@ -197,11 +198,6 @@
      * A reference for `this.props`. Read the documentation there.
      */
     demoProps: {
-      counterValue: {
-        type: Number,
-        defaultValue: '0',
-        inputType: 'text'
-      }
     }
   });
 </script>

@@ -45,14 +45,9 @@
   background-color: $gray17;
 }
 
-::slotted(div),
 .px-branding-bar__powered-by-text,
-.px-branding-bar__title {
-  color: $gray8
-}
-
-.px-branding-bar__powered-by-text {
-
+.px-branding-bar__logo-and-title-container ::slotted(*) {
+  color: $gray8;
 }
 
 // Trumps
