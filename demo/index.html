@@ -35,13 +35,11 @@
       <px-demo-props props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
 
       <!-- Component ---------------------------------------------------------->
-      <px-demo-component style="height: 40px; width:100%;">
-        <div style="height: 600px;">
+      <px-demo-component style="width: 100%;">
+        <px-branding-bar scroll-target="scrollingRegion">
+          <span slot="title">I like Predix</span>
+        </px-branding-bar>
 
-          <px-branding-bar>
-            <span slot="title">I like Predix</span>
-          </px-branding-bar>
-        </div>
       </px-demo-component>
       <!-- END Component ------------------------------------------------------>
 

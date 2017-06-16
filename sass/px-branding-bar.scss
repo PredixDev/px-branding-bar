@@ -37,21 +37,17 @@
 
 // Component
 
-.px-branding-bar__content{
-  // @extend .flex;
-  // @extend .flex--middle;
-  width: 100%;
+:host{
+  @extend .flex;
+  @extend .flex--middle;
+  width: inherit;
   justify-content: space-between;
-
-}
-
-app-header {
   min-height: calculateRem(30px);
   background-color: $gray17;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  @include media-query(palm) {
+    display: none !important;
+    visibility: hidden;
+  }
 }
 
 .px-branding-bar__powered-by-text,
@@ -63,4 +59,3 @@ app-header {
 $inuit-enable-margins--tiny : true;
 $inuit-enable-margins : true;
 @import "px-spacing-design/_trumps.spacing.scss";
-@import "px-widths-design/_trumps.widths.scss";

@@ -7,9 +7,6 @@
 
 <link async rel="import" href="px-ge-svg-logo.html">
 <link defer rel="import" href="predix-logo.html">
-<link defer rel="import" href="../app-layout/app-header/app-header.html">
-<link defer rel="import" href="../app-layout/app-toolbar/app-toolbar.html">
-<link defer rel="import" href="hide-title.html">
 
 <link defer rel="import" href="css/px-branding-bar-styles.html">
 
@@ -29,27 +26,20 @@ REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
 <dom-module id="px-branding-bar">
   <template>
     <style include="px-branding-bar-styles"></style>
-    <app-header fixed condenses effects="hide-title">
-      <app-toolbar style="height: 30px;">
-      <span class="px-branding-bar__content flex flex--middle">
-        <span class="px-branding-bar__logo-and-title-container u-ml">
-          <slot name="logo">
-            <px-ge-svg-logo></px-ge-svg-logo>
-          </slot>
-          <span class="u-ml--">
-            <slot name="title">
-              <label main-title class="zeta">Application Name</label>
-            </slot>
-          </span>
-        </span>
-        <span>
-          <span class="px-branding-bar__powered-by-text zeta">Powered by</span>
-          <predix-logo class="u-mr"></predix-logo>
-        </span>
+    <span class="px-branding-bar__logo-and-title-container u-ml">
+      <slot name="logo">
+        <px-ge-svg-logo></px-ge-svg-logo>
+      </slot>
+      <span class="u-ml--">
+        <slot name="title">
+          <label main-title class="zeta">Application Name</label>
+        </slot>
       </span>
-    </app-toolbar>
-    <app-toolbar sticky style="height: 10px;"></app-toolbar>
-  </app-header>
+    </span>
+    <span>
+      <span class="px-branding-bar__powered-by-text zeta">Powered by</span>
+      <predix-logo class="u-mr"></predix-logo>
+    </span>
   </template>
 </dom-module>
 <script src="dist/px-branding-bar.js"></script>
