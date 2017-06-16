@@ -37,12 +37,21 @@
 
 // Component
 
-:host {
-  @extend .flex;
-  @extend .flex--middle;
+.px-branding-bar__content{
+  // @extend .flex;
+  // @extend .flex--middle;
+  width: 100%;
   justify-content: space-between;
+
+}
+
+app-header {
   min-height: calculateRem(30px);
   background-color: $gray17;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .px-branding-bar__powered-by-text,

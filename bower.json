@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "polymer": "^1.9.1",
-    "px-theme": "^3.0.0"
+    "px-theme": "^3.0.0",
+    "app-layout": "^2.0.0"
   },
   "devDependencies": {
     "px-headings-design": "^1.0.0",
