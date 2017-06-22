@@ -42,7 +42,7 @@
   @extend .flex--middle;
   width: inherit;
   justify-content: space-between;
-  min-height: calculateRem(30px);
+  height: calculateRem(30px);
   background-color: $gray17;
   @include media-query(palm) {
     display: none !important;
