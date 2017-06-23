@@ -42,8 +42,8 @@
   @extend .flex--middle;
   width: inherit;
   justify-content: space-between;
-  height: calculateRem(30px);
-  background-color: $gray17;
+  height: var(--px-branding-bar-height, calculateRem(30px));
+  background-color: var(--px-branding-bar-color, $gray17);
   @include media-query(palm) {
     display: none !important;
     visibility: hidden;
@@ -52,7 +52,12 @@
 
 .px-branding-bar__powered-by-text,
 .px-branding-bar__logo-and-title-container ::slotted(*) {
-  color: $gray8;
+  color: var(--px-branding-bar-logo-and-title-color, $gray8);
+}
+
+#applicationNameSlot ::slotted(*),
+.px-branding-bar__powered-by-text {
+  font-size: var(--px-branding-bar-font-size, calculateRem(15px)) !important;
 }
 
 // Trumps
