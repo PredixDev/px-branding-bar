@@ -26,20 +26,27 @@ REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
 <dom-module id="px-branding-bar">
   <template>
     <style include="px-branding-bar-styles"></style>
-    <span class="px-branding-bar__logo-and-title-container u-ml">
-      <slot name="logo">
-        <px-ge-svg-logo></px-ge-svg-logo>
-      </slot>
-      <span id="applicationNameSlot" class="u-ml--">
+
+    <div class="u-ml flex flex--middle">
+      <div class="u-ml-- flex flex--middle">
+        <slot name="logo">
+          <px-ge-svg-logo class="flex flex--middle"></px-ge-svg-logo>
+        </slot>
+      </div>
+      <div class="u-ml-- flex flex--middle">
         <slot name="title">
           <label>Application Name</label>
         </slot>
-      </span>
-    </span>
-    <span>
-      <span class="px-branding-bar__powered-by-text">Powered by</span>
-      <predix-logo class="u-mr"></predix-logo>
-    </span>
+      </div>
+    </div>
+
+    <div class="flex flex--middle">
+      <slot name="attribution">
+        <span class="u-mr-- px-branding-bar__powered-by-text">Powered by</span>
+        <predix-logo class="u-mr"></predix-logo>
+      </slot>
+    </div>
+
   </template>
 </dom-module>
 <script src="dist/px-branding-bar.js"></script>

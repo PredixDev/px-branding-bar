@@ -48,16 +48,8 @@
     display: none !important;
     visibility: hidden;
   }
-}
-
-.px-branding-bar__powered-by-text,
-.px-branding-bar__logo-and-title-container ::slotted(*) {
-  color: var(--px-branding-bar-logo-and-title-color, $gray8);
-}
-
-#applicationNameSlot ::slotted(*),
-.px-branding-bar__powered-by-text {
   font-size: var(--px-branding-bar-font-size, calculateRem(15px)) !important;
+  color: var(--px-branding-bar-logo-and-title-color, $gray8);
 }
 
 // Trumps
