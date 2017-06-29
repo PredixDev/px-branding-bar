@@ -1,24 +1,16 @@
-<!--
-    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
-    siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
-    'gulp serve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
--->
 <link defer rel="import" href="../polymer/polymer.html" />
 
 <link async rel="import" href="px-ge-svg-logo.html">
 <link defer rel="import" href="predix-logo.html">
-
 <link defer rel="import" href="css/px-branding-bar-styles.html">
 
 <!--
-REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
-
 ##### Usage
 
-    <px-branding-bar></px-branding-bar>
+    <px-branding-bar application-title="Predix UI"></px-branding-bar>
 
 @element px-branding-bar
-@blurb REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+@blurb A component providing a header area to contain title, logo and branding content.
 @homepage index.html
 @demo index.html
 -->
@@ -35,7 +27,7 @@ REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
       </div>
       <div class="u-ml-- flex flex--middle">
         <slot name="title">
-          <label>Application Name</label>
+          <label>{{applicationTitle}}</label>
         </slot>
       </div>
     </div>

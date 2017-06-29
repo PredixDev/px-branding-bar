@@ -44,6 +44,7 @@
   justify-content: space-between;
   height: var(--px-branding-bar-height, calculateRem(30px));
   max-height: calculateRem(67px);
+  min-height: calculateRem(30px);
   background-color: var(--px-branding-bar-color, $gray17);
   @include media-query(palm) {
     display: none !important;
