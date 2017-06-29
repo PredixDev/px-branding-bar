@@ -8,19 +8,7 @@ function runCustomTests() {
     test('Check initial value of counter', function(done){
       var counterEl = Polymer.dom(document).querySelector('px-branding-bar'),
           counterValueEl = Polymer.dom(counterEl.root).querySelector('span');
-      assert.equal(counterValueEl.textContent, '0');
-      done();
-    });
-
-    test('Clicking px-branding-bar increments the counter', function(done){
-      var counterEl = Polymer.dom(document).querySelector('px-branding-bar'),
-          counterValueEl = Polymer.dom(counterEl.root).querySelector('span');
-      assert.equal(counterValueEl.textContent, '0');
-
-      counterEl.click();
-      flush(function(){
-        assert.equal(counterValueEl.textContent, '1');
-      });
+      assert.equal(counterValueEl.textContent, 'Powered by');
       done();
     });
   });
