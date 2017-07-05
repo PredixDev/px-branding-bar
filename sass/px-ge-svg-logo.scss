@@ -14,23 +14,7 @@
 // @author
 //
 
-
-
-// Settings
-@import "px-colors-design/_settings.colors.scss";
-
-// Tools
-
-// Generic
-@import "px-box-sizing-design/_generic.box-sizing.scss";
-
-// Base
-
-// Meta
-
-// Objects
-
 // Component
 svg {
-  fill: var(--px-ge-svg-logo-color, $gray8);
+  fill: var(--px-ge-svg-logo-color, gray);
 }

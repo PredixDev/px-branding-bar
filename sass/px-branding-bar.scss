@@ -14,13 +14,6 @@
 // @author
 //
 
-
-
-// Settings
-@import "px-colors-design/_settings.colors.scss";
-
-// Tools
-
 // Generic
 @import "px-box-sizing-design/_generic.box-sizing.scss";
 
@@ -28,12 +21,7 @@
 @import "px-flexbox-design/_base.flexbox.scss";
 @import "px-viewport-design/_base.viewport.scss";
 
-
 @import "px-headings-design/_base.headings.scss";
-
-// Meta
-
-// Objects
 
 // Component
 
@@ -45,13 +33,13 @@
   height: var(--px-branding-bar-height, calculateRem(30px));
   max-height: calculateRem(67px);
   min-height: calculateRem(30px);
-  background-color: var(--px-branding-bar-color, $gray17);
+  background-color: var(--px-branding-bar-background-color, black);
   @include media-query(palm) {
     display: none !important;
     visibility: hidden;
   }
   font-size: var(--px-branding-bar-font-size, calculateRem(15px)) !important;
-  color: var(--px-branding-bar-logo-and-title-color, $gray8);
+  color: var(--px-branding-bar-logo-and-title-text-color, gray);
 }
 
 // Trumps
