@@ -186,8 +186,14 @@
         type: Array,
         value: function(){
           return [
-            { configName: "Default",
-              configReset: true }
+            { configName: 'Default',
+              applicationTitle: 'Predix Design System',
+              configReset: true },
+            {
+              configName: 'Custom Header',
+              lightDomContent: '<span slot="title">Hello Predix</span>',
+              applicationTitle: ''
+            }
           ]
         }
       }
@@ -202,7 +208,12 @@
        value: 'Predix Design System',
        inputType: 'text',
        inputPlaceholder: 'Application Title'
-      }
+     },
+     lightDomContent: {
+       type: String,
+       defaultValue: '<span slot="title">Hello Predix</span>'
+
+     }
     }
   });
 </script>
