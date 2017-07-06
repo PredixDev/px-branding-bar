@@ -9,10 +9,12 @@
 <link defer rel="import" href="../../px-demo/px-demo-props.html" />
 <link async rel="import" href="../../px-demo/px-demo-interactive.html" />
 <link async rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+<link async rel="import" href="../../px-demo/px-demo-component-snippet.html" />
 
 <!-- Imports for this componnent -->
 <link defer rel="import" href="../../px-demo/css/px-demo-styles.html" />
 <link async rel="import" href="../px-branding-bar.html" />
+<link async rel="import" href="../px-icon-set/px-icon-set.html" />
 
 <!-- Demo DOM module -->
 <dom-module id="local-element-demo">
@@ -36,7 +38,12 @@
 
       <!-- Component ---------------------------------------------------------->
       <px-demo-component style="width: 100%;">
-        <px-branding-bar application-title="[[props.applicationTitle.value]]"></px-branding-bar>
+        <px-branding-bar application-title="[[props.applicationTitle.value]]">
+          <template <template is="dom-if" if="{{isCustomContent(chosenConfig.configName)}}" restamp="true">
+            <span slot="title">Hello Predix</span>
+            <iron-icon slot="logo" icon="px:steam-turbine"></iron-icon>
+          </template>
+        </px-branding-bar>
 
       </px-demo-component>
       <!-- END Component ------------------------------------------------------>
@@ -191,7 +198,7 @@
               configReset: true },
             {
               configName: 'Custom Header',
-              lightDomContent: '<span slot="title">Hello Predix</span>',
+              lightDomContent: '<span slot="title">Hello Predix</span><iron-icon slot="logo" icon="px:steam-turbine"></iron-icon>',
               applicationTitle: ''
             }
           ]
@@ -207,13 +214,16 @@
        type: String,
        value: 'Predix Design System',
        inputType: 'text',
-       inputPlaceholder: 'Application Title'
+       inputPlaceholder: ''
      },
      lightDomContent: {
        type: String,
-       defaultValue: '<span slot="title">Hello Predix</span>'
+       defaultValue: ''
 
      }
-    }
+   },
+   isCustomContent: function(selectedTab) {
+     return selectedTab === 'Custom Header';
+   },
   });
 </script>

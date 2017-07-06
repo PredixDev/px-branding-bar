@@ -33,6 +33,7 @@
     "px-flexbox-design": "^1.0.0",
     "px-viewport-design": "^1.0.0",
     "px-headings-design": "^1.0.0",
-    "px-demo": "^2.0.0"
+    "px-demo": "^2.0.0",
+    "px-icon-set": "px-polymer-font-awesome#^v2.0.0"
   }
 }
