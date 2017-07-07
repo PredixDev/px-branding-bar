@@ -31,7 +31,7 @@ Second, import the component to your application with the following tag in your 
 Finally, use the component in your application:
 
 ```
-Insert Your demo code here.
+<px-branding-bar application-title="Cool New App"></px-branding-bar>
 ```
 
 <br />
