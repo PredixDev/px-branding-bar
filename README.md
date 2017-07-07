@@ -1,8 +1,8 @@
-#px-branding-bar
+# px-branding-bar [![Build Status](https://travis-ci.org/PredixDev/px-branding-bar.svg?branch=master)](https://travis-ci.org/PredixDev/px-branding-bar)
 
 ## Overview
 
-px-branding-bar is a Predix UI component
+The px-branding-bar component provides a header area to contain title, logo and branding content.
 
 ## Usage
 
