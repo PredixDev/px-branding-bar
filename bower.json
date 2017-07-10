@@ -36,5 +36,8 @@
     "px-demo": "^2.0.0",
     "px-icon-set": "px-polymer-font-awesome#^v2.0.0",
     "px-normalize-design": "^v1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
   }
 }
