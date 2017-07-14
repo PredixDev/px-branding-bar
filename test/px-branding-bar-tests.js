@@ -39,10 +39,30 @@ describe('px-branding-bar attributes setting', function () {
 
 describe('px-branding-bar custom slot content', function () {
 
-  it('setting title slot should change displayed title', function() {
+  it('setting title slot should change title property', function() {
     var brandingBarEl = fixture('PxBrandingBarCustomContentFixture');
     flush(function(done){
       expect(brandingBarEl.applicationTitle).to.equal('Moar Predix Please');
+      done();
+    });
+  });
+
+  it('setting title slot should change displayed title', function() {
+    var brandingBarEl = fixture('PxBrandingBarCustomContentFixture');
+    flush(function(done){
+      var titleEl = Polymer.dom(brandingBarEl.root).querySelector('label');
+      expect(titleEl.textContent).to.equal('Moar Predix Please');
+      done();
+    });
+  });
+
+  it('setting logo slot should change displayed logo', function() {
+    var brandingBarEl = fixture('PxBrandingBarCustomContentFixture');
+    flush(function(done){
+      var logoEl = Polymer.dom(brandingBarEl).querySelector('circle');
+      expect(logoEl).exists();
+      expect(logoEl.tagName).to.equal('CIRCLE');
+
       done();
     });
   });
