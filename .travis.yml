@@ -22,6 +22,12 @@ script:
 - xvfb-run wct --skip-plugin sauce
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct --plugin sauce --skip-plugin
   local; fi
+after_success:
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$DEPLOYSECRET"
+  -in deploy.enc -out deploy_key -d; fi
+- cd $TRAVIS_BUILD_DIR/scripts
+- chmod 755 ghp.sh
+- "./ghp.sh"
 env:
   global:
   - secure: UA7ImpMQymvhm35UMibA2fzzsC3hm+T9CiCkn4JkklR08EFHfISdd0bsMWo0LbCdk7TwqNYZlyhYdYcOIclCZwiDiezSgSxBnmYhs480odBYzZVrVSEVF46SZVvXrlZ3c0X3b5G9uBWvtEYz1fMPBBZkzY8zrnwpcUE+2hE9fDb6Hsl0bPQeXkDUI1dudnL972DboXOORCPfg8X3bApQQ2mGJ8LUpFnHIgI9P+Gji2+6IWmiy9b15hboNAxYNrPtfKBhblSw5hpN15lOfKte77BiZDWqiXFY3BZOQf6PVPFOrZFpDaIpbsBISOjkZKCuvhYBcm2oqQRR17tlyKpuoN9LeJvvxZUIN6udz5zwDlSYLsEYXO6ydWBLi2n2G5mtAJnqk91B/51LctuLxgUdB74KXFagx7VUqsHPUfnkQxj6Q3JGeeEd9AYemFH2WwrmRT0AIsUy8WBH9e591KbbRZ54vM+RyyRfqcsggoN4rPGaWsyaB3eTBSoRCmSRlGagUnFzKkGZBNEry2NHcSo7WPmC6CnUsGz3qXxfvLaUtF1HpO6wBdZt4FXozj7TzNqmuLOdinuWWa2Iy8lxyD7UUGWXDxGBfAp8x7vkKRsIiSPwDihw3G/5h3RR6BRUnoX9YfpQ1YI3ADnvgDjlCH5RqXcUAt7zaF7CknWajGloH5o=
