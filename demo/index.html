@@ -9,7 +9,6 @@
 <link defer rel="import" href="../../px-demo/px-demo-props.html" />
 <link async rel="import" href="../../px-demo/px-demo-interactive.html" />
 <link async rel="import" href="../../px-demo/px-demo-component-snippet.html" />
-<link async rel="import" href="../../px-demo/px-demo-component-snippet.html" />
 
 <!-- Imports for this componnent -->
 <link defer rel="import" href="../../px-demo/css/px-demo-styles.html" />
@@ -40,7 +39,7 @@
         <px-branding-bar application-title="[[props.applicationTitle.value]]">
           <template <template is="dom-if" if="{{isCustomContent(chosenConfig.configName)}}" restamp="true">
             <span slot="title">Hello Predix</span>
-            <iron-icon slot="logo" icon="px:steam-turbine"></iron-icon>
+            <px-icon slot="logo" icon="px-utl:alert"></px-icon>
           </template>
         </px-branding-bar>
 
@@ -197,7 +196,7 @@
               configReset: true },
             {
               configName: 'Custom Header',
-              lightDomContent: '<span slot="title">Hello Predix</span><iron-icon slot="logo" icon="px:steam-turbine"></iron-icon>',
+              lightDomContent: '<span slot="title">Hello Predix</span><px-icon slot="logo" icon="px-utl:alert"></px-icon>',
               applicationTitle: ''
             }
           ]
