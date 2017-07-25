@@ -2,7 +2,7 @@
 
 ## Overview
 
-The px-branding-bar component provides a header area to contain title, logo and branding content.
+Px-branding-bar is a Predix UI component which provides a header area to contain title, logo and branding content.
 
 ## Usage
 
