@@ -2,8 +2,8 @@
     "name": "px-branding-bar",
     "author": "General Electric",
     "description": "A Px component",
-    "version": "1.0.2",
-    "private": true,
+    "version": "1.0.3",
+    "private": false,
     "extName": null,
     "repository": {
         "type": "git",
