@@ -1,3 +1,7 @@
+v1.0.4
+==================
+* fix 'powered by' text size and SVG logo centre alignment.
+
 v1.0.3
 ==================
 * update demo for clarity

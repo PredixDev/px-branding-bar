@@ -17,11 +17,10 @@
 // Generic
 @import "px-normalize-design/_generic.normalize-mini.scss";
 @import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
 
 // Base
 @import "px-flexbox-design/_base.flexbox.scss";
-@import "px-viewport-design/_base.viewport.scss";
-
 @import "px-headings-design/_base.headings.scss";
 
 // Component
@@ -39,8 +38,12 @@
     display: none !important;
     visibility: hidden;
   }
-  font-size: var(--px-branding-bar-font-size, calculateRem(15px)) !important;
+  font-size: var(--px-branding-bar-font-size, calculateRem(15px));
   color: var(--px-branding-bar-logo-and-title-text-color, gray);
+}
+
+.px-branding-bar__powered-by-text{
+  font-size: calculateRem(12px);
 }
 
 // Trumps
