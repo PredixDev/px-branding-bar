@@ -1,3 +1,7 @@
+v1.0.6
+==================
+* fix demo so predix-ui will load
+
 v1.0.5
 ==================
 * update demo to use unique name
