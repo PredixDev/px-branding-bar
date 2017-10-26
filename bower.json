@@ -36,7 +36,8 @@
     "px-icon-set": "^v2.0.0",
     "px-normalize-design": "^v1.0.0",
     "px-helpers-design": "^1.0.2",
-    "px-spacing-design": "^1.0.0"
+    "px-spacing-design": "^1.0.0",
+    "web-component-tester": "^6.3.0"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.24"
