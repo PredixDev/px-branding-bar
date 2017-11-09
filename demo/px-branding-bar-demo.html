@@ -1,21 +1,21 @@
 <!-- Common imports -->
-<link defer rel="import" href="../../polymer/polymer.html" />
+<link rel="import" href="../../polymer/polymer.html" />
 
 <!-- Common demo imports -->
-<link async rel="import" href="../../px-demo/px-demo-header.html" />
-<link defer rel="import" href="../../px-demo/px-demo-api-viewer.html" />
-<link async rel="import" href="../../px-demo/px-demo-footer.html" />
-<link async rel="import" href="../../px-demo/px-demo-configs.html" />
-<link defer rel="import" href="../../px-demo/px-demo-props.html" />
-<link async rel="import" href="../../px-demo/px-demo-interactive.html" />
-<link async rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+<link rel="import" href="../../px-demo/px-demo-header.html" />
+<link rel="import" href="../../px-demo/px-demo-api-viewer.html" />
+<link rel="import" href="../../px-demo/px-demo-footer.html" />
+<link rel="import" href="../../px-demo/px-demo-configs.html" />
+<link rel="import" href="../../px-demo/px-demo-props.html" />
+<link rel="import" href="../../px-demo/px-demo-interactive.html" />
+<link rel="import" href="../../px-demo/px-demo-component-snippet.html" />
 
-<!-- Imports for this componnent -->
-<link defer rel="import" href="../../px-demo/css/px-demo-styles.html" />
-<link async rel="import" href="../px-branding-bar.html" />
+<!-- Imports for this component -->
+<link rel="import" href="../../px-demo/css/px-demo-styles.html" />
+<link rel="import" href="../px-branding-bar.html" />
 
 <!-- Demo DOM module -->
-<dom-module id="local-element-demo">
+<dom-module id="px-branding-bar-demo">
   <template>
 
     <style include="px-demo-styles" is="custom-style"></style>
@@ -23,7 +23,8 @@
     <!-- Header -->
     <px-demo-header
         module-name="px-branding-bar"
-        description="A component providing a header area to contain title, logo and branding content.">
+        description="A component providing a header area to contain title, logo and branding content."
+        desktop tablet>
     </px-demo-header>
 
     <!-- Interactive -->
@@ -64,7 +65,7 @@
 </dom-module>
 <script>
   Polymer({
-    is: 'local-element-demo',
+    is: 'px-branding-bar-demo',
 
     properties: {
 
