@@ -1,3 +1,7 @@
+v1.1.2
+==================
+* Fix demo for IE
+
 v1.1.1
 ==================
 * add missing custom-style wrapper
