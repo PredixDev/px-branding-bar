@@ -32,12 +32,11 @@
     "px-box-sizing-design": "^1.0.0",
     "px-flexbox-design": "^1.0.0",
     "px-headings-design": "^1.0.0",
-    "px-demo": "^2.0.0",
+    "px-demo": "^3.0.0",
     "px-icon-set": "^v2.0.0",
     "px-normalize-design": "^v1.0.0",
     "px-helpers-design": "^1.0.2",
     "px-spacing-design": "^1.0.0",
-    "px-demo": "^3.0.0",
     "web-component-tester": "^6.0.0"
   },
   "resolutions": {
@@ -55,5 +54,6 @@
         "webcomponentsjs": "^0.7.0"
       }
     }
-  }
+  },
+  "license": "BSD-3-Clause"
 }
