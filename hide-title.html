@@ -14,15 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../app-layout/app-scroll-effects/app-scroll-effects-behavior.html">
+<script type="module" src="../@polymer/polymer/polymer-legacy.js"></script>
+<script type="module" src="../@polymer/app-layout/app-scroll-effects/app-scroll-effects-behavior.js"></script>
 
-<script>
+<script type="module">
+import '@polymer/polymer/polymer-legacy.js';
+import '@polymer/app-layout/app-scroll-effects/app-scroll-effects-behavior.js';
+import { registerEffect } from '@polymer/app-layout/helpers/helpers.js';
+import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
 
-Polymer.AppLayout.registerEffect('px-app-header-scroll-effect', {
+registerEffect('px-app-header-scroll-effect', {
   setUp: function(config) {
     // the effect's config is passed to the setUp.
-    this._fxResizeLogo = { logo: Polymer.dom(this).querySelector('.px-branding-bar__content') };
+    this._fxResizeLogo = { logo: dom(this).querySelector('.px-branding-bar__content') };
     this._fxResizeLogo.logo.style.willChange = 'transform, opacity';
   },
 

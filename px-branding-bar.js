@@ -1,4 +1,4 @@
-<!--
+/*
 Copyright (c) 2018, General Electric
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,15 +12,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
-
-<link defer rel="import" href="../polymer/polymer.html" />
-
-<link async rel="import" href="px-ge-svg-logo.html">
-<link defer rel="import" href="predix-logo.html">
-<link defer rel="import" href="css/px-branding-bar-styles.html">
-
-<!--
+*/
+/**
 ### Usage
 To use the default icon (the GE Monogram):
 
@@ -47,10 +40,21 @@ Custom property | Description
 @blurb A component providing a header area to contain title, logo and branding content.
 @homepage index.html
 @demo index.html
--->
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '@polymer/polymer/polymer-legacy.js';
 
-<dom-module id="px-branding-bar">
-  <template>
+import './px-ge-svg-logo.js';
+import './predix-logo.js';
+import './css/px-branding-bar-styles.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+Polymer({
+  _template: html`
     <style include="px-branding-bar-styles"></style>
 
     <div class="u-ml flex flex--middle">
@@ -72,7 +76,13 @@ Custom property | Description
         <predix-logo class="u-mr"></predix-logo>
       </slot>
     </div>
+`,
 
-  </template>
-</dom-module>
-<script src="dist/px-branding-bar.js"></script>
+  is:'px-branding-bar',
+
+  properties:{/**
+         * The application title to display in the lefthand corner of the branding bar.
+         * Defaults to the `document.title` attribute if not specified.
+         * @type {String}
+         */applicationTitle:{type:String,value:function value(){return document.title}}}
+})
